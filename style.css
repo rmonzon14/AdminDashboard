@@ -14,7 +14,8 @@ ul {
 }
 
 .sidebar {
-    background-color:#ccdfff;
+    background-color: 
+    #e7f0fe;
     width: 15%;
 }
 
@@ -36,7 +37,7 @@ ul {
 .sidebar ol li {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #0f172a;
+    color: #000000;
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
@@ -44,6 +45,22 @@ ul {
 
 .sidebar ol:last-child {
     margin-top: 50px;
+}
+
+.dashboard-icons {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar div img {
+    width: 50px;
+    height: 50px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .header-container {
@@ -64,9 +81,12 @@ ul {
     gap: 20px;
 }
 
+.row-one-header p {
+    font-weight: bold;
+}
+
 .row-one-header span {
     font-size: 1.4rem;
-    font-weight: bold;
     color: rgb(59, 54, 54);
 }
 
@@ -91,28 +111,50 @@ ul {
     margin-bottom: 30px;
 }
 
-.main-container {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
 .row-one-header img {
     width: 30px;
     height: 30px;
 }
 
-.row-two-header img {
-    width: 50px;
-    height: 50px;
+.row-two-header {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 }
 
-.dashboard-icons {
+.row-two-header div:first-child {
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.row-two-header div:first-child img:nth-child(1) {
     width: 20px;
     height: 20px;
 }
 
-.sidebar div img {
-    width: 50px;
-    height: 50px;
+.row-two-header div:first-child img:nth-child(2) {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.row-two-header span {
+    font-weight: bold;
+}
+
+.row-two-header:last-child button {
+    padding: 5px 20px;
+    border-radius: 100px;
+    margin-right: 20px;
+    background-color: rgb(0, 0, 0);
+    border-style: none;
+    color: white;
+    font-weight: bold;
+}
+
+.row-two-header:last-child button:hover {
+    cursor: pointer;
 }

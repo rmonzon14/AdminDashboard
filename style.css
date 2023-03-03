@@ -5,6 +5,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.projects-items div, .announcements-items div, .trending-items div{
+    background-color: white;
+}
+
 body {
     min-height: 100vh;
     display: flex;
@@ -164,6 +168,9 @@ ul {
     cursor: pointer;
 }
 
-.projects div div{
-    background-color: white;
+.projects-items {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(2, 400px);
+    gap: 20px;
 }

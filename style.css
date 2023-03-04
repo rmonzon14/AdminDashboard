@@ -1,12 +1,14 @@
+:root {
+    --contents-backgroundColor: #eee8e8;
+    --content-items-boxShadow: 2px 2px 8px rgb(178, 178, 178);
+    --content-items-borderRadius: 7px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-}
-
-.projects-items div, .announcements-items div, .trending-items div{
-    background-color: white;
 }
 
 .projects, .announcements, .trending {
@@ -195,12 +197,19 @@ h3 {
     gap: 20px;
 }
 
-.projects-items div:not(.projects-btn) {
+.projects-items > div {
     height: 200px;
-    border-radius: 7px;
+    border-radius: var(--content-items-border);
+    box-shadow: var(--content-items-shadow);
     border-left: 7px solid black;
     padding: 30px 20px;
     position: relative;
+    background-color: #eee8e8;
+}
+
+.projects-items h4 {
+    margin-bottom: 8px;
+    letter-spacing: 2px;
 }
 
 .projects-btn button {
@@ -214,4 +223,18 @@ h3 {
     right: 0;
     bottom: 0;
     margin: 20px;
+}
+
+.announcements-items {
+    box-shadow: var(--content-items-boxShadow);
+    border-radius: var(--content-items-borderRadius);
+    background-color: var(--contents-backgroundColor);
+    padding: 20px;
+}
+
+.trending-items {
+    box-shadow: var(--content-items-boxShadow);
+    border-radius: var(--content-items-borderRadius);
+    background-color: var(--contents-backgroundColor);
+    padding: 20px;
 }

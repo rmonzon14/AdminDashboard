@@ -18,27 +18,27 @@ ul {
     list-style: none;
 }
 
-.sidebar {
+aside {
     background-color:#2f8c91;
     width: 15%;
 }
 
-.sidebar {
+aside {
     padding: 10px 20px 0 20px; 
 }
 
-.sidebar div {
+aside div {
     display: flex;
     gap: 8px;
     align-items: center;
     margin-bottom: 40px;
 }
 
-.sidebar ol {
+aside ol {
     margin-left: 20px;
 }
 
-.sidebar ol li {
+aside ol li {
     font-size: 1rem;
     font-weight: bold;
     display: flex;
@@ -46,7 +46,7 @@ ul {
     margin-bottom: 20px;
 }
 
-.sidebar ol:last-child {
+aside ol:last-child {
     margin-top: 50px;
 }
 
@@ -55,24 +55,24 @@ ul {
     height: 20px;
 }
 
-.sidebar div img {
+aside div img {
     width: 50px;
     height: 50px;
 }
 
-.sidebar a {
+aside a {
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
 
-.main-container {
+main {
     background-color: #d0dddf;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
-.header-container {
+header {
     background-color: #ffffff;
     box-shadow: 0px 2px 4px -3px black;
     height: 22%;
@@ -168,9 +168,34 @@ ul {
     cursor: pointer;
 }
 
+#contents-container {
+    padding: 20px;
+}
+
 .projects-items {
     display: grid;
-    grid-template-columns: repeat(3, 400px);
-    grid-template-rows: repeat(2, 400px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 20px;
+}
+
+.projects-items div:not(.projects-btn) {
+    height: 200px;
+    border-radius: 7px;
+    border-left: 7px solid black;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.projects-btn button {
+    border-style: none;
+    background-color: transparent;
+    width: 25px;
+}
+
+.projects-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
 }

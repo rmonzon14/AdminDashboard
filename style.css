@@ -1,7 +1,8 @@
 :root {
-    --contents-backgroundColor: #eee8e8;
+    --contents-backgroundColor: #f6fdff;
     --content-items-boxShadow: 2px 2px 8px rgb(178, 178, 178);
     --content-items-borderRadius: 7px;
+    --theme-color: #bfdbd0;
 }
 
 * {
@@ -25,7 +26,7 @@ ul {
 }
 
 aside {
-    background-color:#2f8c91;
+    background-color:#60a68a;
     width: 15%;
 }
 
@@ -72,7 +73,7 @@ aside a {
 }
 
 main {
-    background-color: #d0dddf;
+    background-color: var(--theme-color);
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -118,8 +119,8 @@ header {
 }
 
 #search-form input {
-    background-color: #d0dddf;
-    border-radius: 25px;
+    background-color: var(--theme-color);
+    border-radius: 25px;    
     border-style: none;
     width: 100%;
     padding: 10px;
@@ -161,7 +162,7 @@ header {
 }
 
 .row-two-header:last-child button {
-    padding: 5px 20px;
+    padding: 7px 35px;
     border-radius: 100px;
     margin-right: 20px;
     background-color: rgb(0, 0, 0);
@@ -199,12 +200,12 @@ h3 {
 
 .projects-items > div {
     height: 200px;
-    border-radius: var(--content-items-border);
-    box-shadow: var(--content-items-shadow);
+    border-radius: var(--content-items-borderRadius);
+    box-shadow: var(--content-items-boxShadow);
+    background-color: var(--contents-backgroundColor);
     border-left: 7px solid black;
     padding: 30px 20px;
     position: relative;
-    background-color: #eee8e8;
 }
 
 .projects-items h4 {
@@ -237,4 +238,44 @@ h3 {
     border-radius: var(--content-items-borderRadius);
     background-color: var(--contents-backgroundColor);
     padding: 20px;
+}
+
+.announcements div {
+    margin: 5px;
+    padding: 5px;
+}
+
+h5 {
+    margin-bottom: 2px;
+}
+
+.announcements-items div:not(:last-child) {
+    border-bottom: solid rgb(234, 234, 234) 2px;
+}
+
+.trending-items div {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.trending-items img {
+    margin-right: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.trending-items div div {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-items div div p:nth-child(1) {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.trending-items div div p:last-child {
+    font-size: 0.8rem;
 }

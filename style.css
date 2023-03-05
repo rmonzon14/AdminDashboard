@@ -219,6 +219,10 @@ h3 {
     width: 25px;
 }
 
+.projects-btn button:hover {
+    cursor: pointer;
+}
+
 .projects-btn {
     position: absolute;
     right: 0;
